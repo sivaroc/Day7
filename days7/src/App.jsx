@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -24,6 +24,37 @@ function App() {
     </div>
   );
 }
+
+export default App;*/
+
+import React, { useState } from 'react';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>Counter</h1>
+      <h2>{count}</h2>
+      <button onClick={increment} style={buttonStyle}>
+        Increment
+      </button>
+      <button onClick={decrement} style={buttonStyle}>
+        Decrement
+      </button>
+    </div>
+  );
+}
+
+const buttonStyle = {
+  margin: '5px',
+  padding: '10px 20px',
+  fontSize: '16px',
+  cursor: 'pointer',
+};
 
 export default App;
 
